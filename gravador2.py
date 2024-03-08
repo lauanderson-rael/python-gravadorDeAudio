@@ -37,11 +37,11 @@ class Recorder:
 
 # Exemplo de uso:
 recorder = Recorder()
+recorder.start_recording()  # Iniciar gravação
+input("Pressione Enter para parar a gravação...")   # Aguardar alguns segundos
+recorder.stop_recording()   # Parar gravação
 
-recorder.start_recording()
-input("Pressione Enter para parar a gravação...") 
-recorder.stop_recording()
-
+# Salvar gravação
 filename = "gravacao_finalizada.wav"
 recorder.save_recording(filename)
 print(f"Gravação salva em {filename}")
