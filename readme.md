@@ -15,6 +15,7 @@ Portanto, durante a gravação, há duas threads em execução: a thread princip
 <hr>
 <h3>Como é iniciada a nova thread? </h3> 
 <p>
+  <b>linha 19: threading.Thread(target=_gravar, args=(stream,)).start()</b>
   <b>threading.Thread:</b> Esta é uma classe da biblioteca threading em Python que permite criar e manipular threads. Ao instanciar um objeto Thread, estamos preparando uma nova thread para executar uma determinada função.
 
 <b>start():</b> Este é um método que inicia a execução da thread. Uma vez que uma thread é criada com os detalhes especificados (alvo e argumentos), chamamos start() para iniciar a execução dessa thread. Quando este método é chamado, a função _gravar começará a ser executada em paralelo com a thread principal.
