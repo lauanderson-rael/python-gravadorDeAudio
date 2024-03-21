@@ -33,19 +33,18 @@ def parar_gravacao():
     botao_parar.config(state=tk.DISABLED)
     msg_gravacao_finalizada.config(text="Gravação concluída com sucesso!")  # mensagem final
     msg_gravacao_iniciada.config(text="") 
-    
 
 def _gravar(stream):
     global gravando
     while gravando:
         dados = stream.read(1024)
         frames.append(dados)
-
+        
 gravando = False
 frames = []
 audio = pyaudio.PyAudio()
-
-janela = tk.Tk() #tela
+#tela
+janela = tk.Tk() 
 janela.title("GRAVADOR DE ÁUDIO - PYTHON")
 janela.geometry("400x250")
 
