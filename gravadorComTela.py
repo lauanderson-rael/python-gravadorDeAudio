@@ -32,6 +32,7 @@ def parar_gravacao():
     botao_iniciar.config(state=tk.NORMAL)
     botao_parar.config(state=tk.DISABLED)
     msg_gravacao_finalizada.config(text="Gravação concluída com sucesso!")  # mensagem final
+    msg_gravacao_iniciada.config(text="") 
     
 
 def _gravar(stream):
